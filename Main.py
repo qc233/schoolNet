@@ -106,7 +106,7 @@ def login():
 
     response = requests.post(url=login_url, data=data, headers=welcome_header, verify=False)
 
-    if response.text.split('<title>')[1].split('</title>')[0] == '认证成功页':
+    if response.text.split('<title>')[1].split('</title>')[0] != '认证成功页':
         sResponse = requests.post(url=login_url, data=data, headers=welcome_header, verify=False)
 
 
