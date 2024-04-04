@@ -64,6 +64,12 @@ def getTargetIP(prefix) -> str:
 
 
 def login():
+
+    asd = requests.get(url="http://1.1.1.1")
+    if len(asd.text.split('<title>注销页</title>')) != 0:
+
+        return 0
+
     login_url = f'http://1.1.1.1:801/eportal/?' \
                 f'c=ACSetting&' \
                 f'a=Login&protocol=http:&' \
